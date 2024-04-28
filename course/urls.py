@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     path('enrolled-courses/', views.enrolled_courses, name='enrolled_courses'),
     path('course/<int:course_id>/question-papers/', views.question_papers, name='question_papers'),
-    path('course/<int:course_id>/question-papers-modal/', views.question_papers_modal, name='question_papers_modal'),
+    path('course/<int:course_id>/question-papers-modal/', views.previous_question_papers, name='previous_question_papers'),
 ]

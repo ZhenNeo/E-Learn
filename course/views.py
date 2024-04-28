@@ -7,7 +7,7 @@ def enrolled_courses(request):
     enrolled_courses = [enrollment.course for enrollment in user_enrollments]
     return render(request, 'enrolled_courses.html', {'enrolled_courses': enrolled_courses})
 
-def question_papers_modal(request, course_id):
+def previous_question_papers(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
     question_papers = QuestionPaper.objects.filter(course=course)
     data = {
